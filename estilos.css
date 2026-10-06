@@ -1,0 +1,149 @@
+/* Reset básico: quita márgenes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo con gradiente elegante */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Contenedor principal centrado */
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* Secciones con fondo gris claro */
+.seccion {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Títulos de sección */
+.seccion h2 {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+}
+
+/* Campos del formulario */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.campo input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al hacer clic en el input */
+.campo input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Contenedor de botones */
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Estilo base de botones */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #667eea;
+    color: white;
+    flex: 1;
+    min-width: 140px;
+}
+
+/* Efecto hover: botón se eleva */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Colores de botones */
+.btn-verde { background-color: #48bb78; }
+.btn-verde:hover { background-color: #38a169; }
+
+.btn-azul { background-color: #4299e1; }
+.btn-azul:hover { background-color: #3182ce; }
+
+.btn-rojo { background-color: #f56565; }
+.btn-rojo:hover { background-color: #e53e3e; }
+
+.btn-naranja { background-color: #ed8936; }
+.btn-naranja:hover { background-color: #dd6b20; }
+
+.btn-morado { background-color: #9f7aea; }
+.btn-morado:hover { background-color: #805ad5; }
+
+.btn-gris { background-color: #a0aec0; }
+.btn-gris:hover { background-color: #718096; }
+
+/* Caja de resultado */
+.resultado {
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    min-height: 60px;
+    font-size: 18px;
+    color: #2d3748;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .btn {
+        flex: 1 1 100%;
+    }
+}

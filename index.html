@@ -1,60 +1,62 @@
-<!-- Declaración del tipo de documento HTML5 -->
 <!DOCTYPE html>
-
-<!-- Etiqueta html que envuelve todo el documento, lang="es" indica que está en español -->
 <html lang="es">
-
-<!-- head contiene metadatos (información sobre la página que no se ve) -->
 <head>
-    <!-- Define la codificación de caracteres para que se vean bien acentos y ñ -->
     <meta charset="UTF-8">
-    
-    <!-- Título que aparece en la pestaña del navegador -->
     <title>15 Funciones - Formularios</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-
-<!-- body contiene todo lo que se ve en la página -->
 <body>
-    <!-- Encabezado principal nivel 1 -->
-    <h1>15 Funciones con Formularios</h1>
+    <div class="contenedor">
+        <h1>15 Funciones con Formularios</h1>
 
-    <!-- Párrafo con un input de texto para escribir el nombre -->
-    <!-- id="nombre" sirve para que JavaScript pueda encontrar este input -->
-    <p>Nombre: <input type="text" id="nombre"></p>
-    
-    <!-- Input numérico para el primer número, value="0" es el valor por defecto -->
-    <p>Número 1: <input type="number" id="num1" value="0"></p>
-    
-    <!-- Input numérico para el segundo número -->
-    <p>Número 2: <input type="number" id="num2" value="0"></p>
+        <!-- Sección de datos de entrada -->
+        <div class="seccion">
+            <h2>Datos de entrada</h2>
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre">
+            </div>
+            <div class="campo">
+                <label for="num1">Número 1:</label>
+                <input type="number" id="num1" value="0">
+            </div>
+            <div class="campo">
+                <label for="num2">Número 2:</label>
+                <input type="number" id="num2" value="0">
+            </div>
+        </div>
 
-    <!-- Salto de línea doble para separar secciones -->
-    <br>
+        <!-- Sección de botones -->
+        <div class="seccion">
+            <h2>Funciones</h2>
+            <div class="botones">
+                <button onclick="saludar()" class="btn">1. Saludar</button>
+                <button onclick="sumar()" class="btn btn-verde">2. Sumar</button>
+                <button onclick="restar()" class="btn btn-verde">3. Restar</button>
+                <button onclick="multiplicar()" class="btn btn-verde">4. Multiplicar</button>
+                <button onclick="dividir()" class="btn btn-verde">5. Dividir</button>
+                <button onclick="mostrarFecha()" class="btn btn-azul">6. Fecha</button>
+                <button onclick="mostrarHora()" class="btn btn-azul">7. Hora</button>
+                <button onclick="cambiarColor()" class="btn btn-azul">8. Color Azul</button>
+                <button onclick="quitarColor()" class="btn btn-gris">9. Quitar Color</button>
+                <button onclick="mayusculas()" class="btn btn-morado">10. Mayúsculas</button>
+                <button onclick="minusculas()" class="btn btn-morado">11. Minúsculas</button>
+                <button onclick="longitud()" class="btn btn-morado">12. Longitud</button>
+                <button onclick="doble()" class="btn btn-naranja">13. Doble</button>
+                <button onclick="limpiar()" class="btn btn-rojo">14. Limpiar</button>
+                <button onclick="mostrarTodo()" class="btn btn-azul">15. Mostrar Todo</button>
+            </div>
+        </div>
 
-    <!-- Botones: onclick="funcion()" llama a la función cuando se hace clic -->
-    <button onclick="saludar()">1. Saludar</button>
-    <button onclick="sumar()">2. Sumar</button>
-    <button onclick="restar()">3. Restar</button>
-    <button onclick="multiplicar()">4. Multiplicar</button>
-    <button onclick="dividir()">5. Dividir</button>
-    <button onclick="mostrarFecha()">6. Fecha</button>
-    <button onclick="mostrarHora()">7. Hora</button>
-    <button onclick="cambiarColor()">8. Color Azul</button>
-    <button onclick="quitarColor()">9. Quitar Color</button>
-    <button onclick="mayusculas()">10. Mayúsculas</button>
-    <button onclick="minusculas()">11. Minúsculas</button>
-    <button onclick="longitud()">12. Longitud</button>
-    <button onclick="doble()">13. Doble</button>
-    <button onclick="limpiar()">14. Limpiar</button>
-    <button onclick="mostrarTodo()">15. Mostrar Todo</button>
+        <!-- Sección de resultado -->
+        <div class="seccion">
+            <h2>Resultado</h2>
+            <div id="resultado" class="resultado">
+                Aquí aparecerán los resultados...
+            </div>
+        </div>
+    </div>
 
-    <!-- Salto de línea doble -->
-    <br><br>
-    
-    <!-- Div donde se muestran los resultados, id="resultado" para que JS lo encuentre -->
-    <div id="resultado">Aquí aparecerán los resultados...</div>
-
-    <!-- Vincula el archivo JavaScript externo con esta página HTML -->
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -3,10 +3,12 @@
 // Lee el nombre del input y muestra un saludo
 // ============================================
 function saludar() {
-    // Obtiene el valor escrito en el input con id="nombre"
     var nombre = document.getElementById("nombre").value;
-    // Muestra el saludo en el div con id="resultado"
-    document.getElementById("resultado").innerHTML = "Hola, " + nombre + "!";
+    if (nombre === "") {
+        document.getElementById("resultado").innerHTML = "Por favor, escribe tu nombre";
+    } else {
+        document.getElementById("resultado").innerHTML = "¡Hola, " + nombre + "! 👋";
+    }
 }
 
 // ============================================
@@ -14,10 +16,8 @@ function saludar() {
 // Lee los 2 números y los suma
 // ============================================
 function sumar() {
-    // parseFloat convierte el texto del input a número decimal
     var a = parseFloat(document.getElementById("num1").value);
     var b = parseFloat(document.getElementById("num2").value);
-    // Muestra la operación y el resultado
     document.getElementById("resultado").innerHTML = a + " + " + b + " = " + (a + b);
 }
 
@@ -38,7 +38,7 @@ function restar() {
 function multiplicar() {
     var a = parseFloat(document.getElementById("num1").value);
     var b = parseFloat(document.getElementById("num2").value);
-    document.getElementById("resultado").innerHTML = a + " x " + b + " = " + (a * b);
+    document.getElementById("resultado").innerHTML = a + " × " + b + " = " + (a * b);
 }
 
 // ============================================
@@ -49,13 +49,10 @@ function multiplicar() {
 function dividir() {
     var a = parseFloat(document.getElementById("num1").value);
     var b = parseFloat(document.getElementById("num2").value);
-    
-    // Si el segundo número es 0, muestra error
     if (b === 0) {
-        document.getElementById("resultado").innerHTML = "No se puede dividir entre 0";
+        document.getElementById("resultado").innerHTML = "❌ No se puede dividir entre 0";
     } else {
-        // Si no es 0, muestra la división
-        document.getElementById("resultado").innerHTML = a + " / " + b + " = " + (a / b);
+        document.getElementById("resultado").innerHTML = a + " ÷ " + b + " = " + (a / b);
     }
 }
 
@@ -64,10 +61,8 @@ function dividir() {
 // Muestra la fecha actual del sistema
 // ============================================
 function mostrarFecha() {
-    // new Date() crea un objeto con la fecha/hora actual
-    // toLocaleDateString() lo convierte a formato local (ej: "6/10/2026")
     var fecha = new Date().toLocaleDateString();
-    document.getElementById("resultado").innerHTML = "Hoy es: " + fecha;
+    document.getElementById("resultado").innerHTML = "📅 Hoy es: " + fecha;
 }
 
 // ============================================
@@ -75,9 +70,8 @@ function mostrarFecha() {
 // Muestra la hora actual del sistema
 // ============================================
 function mostrarHora() {
-    // toLocaleTimeString() convierte la fecha a formato de hora
     var hora = new Date().toLocaleTimeString();
-    document.getElementById("resultado").innerHTML = "Hora: " + hora;
+    document.getElementById("resultado").innerHTML = "🕐 Hora: " + hora;
 }
 
 // ============================================
@@ -85,10 +79,8 @@ function mostrarHora() {
 // Cambia el color de fondo de la página a azul
 // ============================================
 function cambiarColor() {
-    // document.body accede al elemento <body> de la página
-    // style.backgroundColor cambia el color de fondo
     document.body.style.backgroundColor = "lightblue";
-    document.getElementById("resultado").innerHTML = "Color cambiado a azul";
+    document.getElementById("resultado").innerHTML = "🎨 Color de fondo cambiado a azul";
 }
 
 // ============================================
@@ -96,8 +88,8 @@ function cambiarColor() {
 // Vuelve el fondo a blanco
 // ============================================
 function quitarColor() {
-    document.body.style.backgroundColor = "white";
-    document.getElementById("resultado").innerHTML = "Color quitado";
+    document.body.style.backgroundColor = "";
+    document.getElementById("resultado").innerHTML = "🧹 Color de fondo quitado";
 }
 
 // ============================================
@@ -106,8 +98,11 @@ function quitarColor() {
 // ============================================
 function mayusculas() {
     var nombre = document.getElementById("nombre").value;
-    // toUpperCase() convierte todo el texto a mayúsculas
-    document.getElementById("resultado").innerHTML = nombre.toUpperCase();
+    if (nombre === "") {
+        document.getElementById("resultado").innerHTML = "Por favor, escribe tu nombre";
+    } else {
+        document.getElementById("resultado").innerHTML = nombre.toUpperCase();
+    }
 }
 
 // ============================================
@@ -116,8 +111,11 @@ function mayusculas() {
 // ============================================
 function minusculas() {
     var nombre = document.getElementById("nombre").value;
-    // toLowerCase() convierte todo el texto a minúsculas
-    document.getElementById("resultado").innerHTML = nombre.toLowerCase();
+    if (nombre === "") {
+        document.getElementById("resultado").innerHTML = "Por favor, escribe tu nombre";
+    } else {
+        document.getElementById("resultado").innerHTML = nombre.toLowerCase();
+    }
 }
 
 // ============================================
@@ -126,8 +124,11 @@ function minusculas() {
 // ============================================
 function longitud() {
     var nombre = document.getElementById("nombre").value;
-    // .length cuenta los caracteres de un texto
-    document.getElementById("resultado").innerHTML = "Tu nombre tiene " + nombre.length + " caracteres";
+    if (nombre === "") {
+        document.getElementById("resultado").innerHTML = "Por favor, escribe tu nombre";
+    } else {
+        document.getElementById("resultado").innerHTML = "Tu nombre tiene " + nombre.length + " caracteres";
+    }
 }
 
 // ============================================
@@ -144,14 +145,11 @@ function doble() {
 // Resetea todos los inputs y el fondo
 // ============================================
 function limpiar() {
-    // Pone los inputs vacíos o en 0
     document.getElementById("nombre").value = "";
     document.getElementById("num1").value = "0";
     document.getElementById("num2").value = "0";
-    // Resetea el resultado
-    document.getElementById("resultado").innerHTML = "Todo limpio";
-    // Resetea el fondo
-    document.body.style.backgroundColor = "white";
+    document.getElementById("resultado").innerHTML = "🧹 Todo limpio";
+    document.body.style.backgroundColor = "";
 }
 
 // ============================================
@@ -159,10 +157,12 @@ function limpiar() {
 // Muestra todos los datos de los inputs
 // ============================================
 function mostrarTodo() {
-    // Lee los valores de los 3 inputs
     var nombre = document.getElementById("nombre").value;
     var num1 = document.getElementById("num1").value;
     var num2 = document.getElementById("num2").value;
-    // Muestra los 3 valores juntos, <br> es un salto de línea en HTML
-    document.getElementById("resultado").innerHTML = "Nombre: " + nombre + "<br>Número 1: " + num1 + "<br>Número 2: " + num2;
+    document.getElementById("resultado").innerHTML = 
+        "📋 <strong>Datos actuales:</strong><br>" +
+        "Nombre: " + nombre + "<br>" +
+        "Número 1: " + num1 + "<br>" +
+        "Número 2: " + num2;
 }

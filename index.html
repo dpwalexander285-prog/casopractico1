@@ -1,0 +1,60 @@
+<!-- Declaración del tipo de documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Etiqueta html que envuelve todo el documento, lang="es" indica que está en español -->
+<html lang="es">
+
+<!-- head contiene metadatos (información sobre la página que no se ve) -->
+<head>
+    <!-- Define la codificación de caracteres para que se vean bien acentos y ñ -->
+    <meta charset="UTF-8">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>15 Funciones - Formularios</title>
+</head>
+
+<!-- body contiene todo lo que se ve en la página -->
+<body>
+    <!-- Encabezado principal nivel 1 -->
+    <h1>15 Funciones con Formularios</h1>
+
+    <!-- Párrafo con un input de texto para escribir el nombre -->
+    <!-- id="nombre" sirve para que JavaScript pueda encontrar este input -->
+    <p>Nombre: <input type="text" id="nombre"></p>
+    
+    <!-- Input numérico para el primer número, value="0" es el valor por defecto -->
+    <p>Número 1: <input type="number" id="num1" value="0"></p>
+    
+    <!-- Input numérico para el segundo número -->
+    <p>Número 2: <input type="number" id="num2" value="0"></p>
+
+    <!-- Salto de línea doble para separar secciones -->
+    <br>
+
+    <!-- Botones: onclick="funcion()" llama a la función cuando se hace clic -->
+    <button onclick="saludar()">1. Saludar</button>
+    <button onclick="sumar()">2. Sumar</button>
+    <button onclick="restar()">3. Restar</button>
+    <button onclick="multiplicar()">4. Multiplicar</button>
+    <button onclick="dividir()">5. Dividir</button>
+    <button onclick="mostrarFecha()">6. Fecha</button>
+    <button onclick="mostrarHora()">7. Hora</button>
+    <button onclick="cambiarColor()">8. Color Azul</button>
+    <button onclick="quitarColor()">9. Quitar Color</button>
+    <button onclick="mayusculas()">10. Mayúsculas</button>
+    <button onclick="minusculas()">11. Minúsculas</button>
+    <button onclick="longitud()">12. Longitud</button>
+    <button onclick="doble()">13. Doble</button>
+    <button onclick="limpiar()">14. Limpiar</button>
+    <button onclick="mostrarTodo()">15. Mostrar Todo</button>
+
+    <!-- Salto de línea doble -->
+    <br><br>
+    
+    <!-- Div donde se muestran los resultados, id="resultado" para que JS lo encuentre -->
+    <div id="resultado">Aquí aparecerán los resultados...</div>
+
+    <!-- Vincula el archivo JavaScript externo con esta página HTML -->
+    <script src="script.js"></script>
+</body>
+</html>
